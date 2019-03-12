@@ -5,13 +5,14 @@ class Solution(object):
         profit = 0
         length = len(prices)
         while sell < length:
-            if(prices[buy]>prices[sell]):
+            if(prices[sell]>prices[buy]):
+                profit += prices[sell]-prices[buy]
                 buy = sell
-            elif(prices[sell]-prices[buy]>profit):
-                profit = prices[sell]-prices[buy]
-            sell += 1
+            else:
+                buy +=1
+            sell +=1
         return profit
 
 if __name__ == "__main__":
     obj = Solution()
-    print obj.maxProfit([7,6,4,3,1])
+    print obj.maxProfit([1,2,3,4,5])
