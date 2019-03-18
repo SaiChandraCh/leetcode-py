@@ -11,6 +11,7 @@ class Solution(object):
             else:
                 buy +=1
             sell +=1
+        print "a"," a ","a"
         return profit
 
 if __name__ == "__main__":
